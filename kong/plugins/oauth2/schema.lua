@@ -19,6 +19,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_outbound },
           { scopes = { type = "array", elements = { type = "string" }, }, },
           { mandatory_scope = { type = "boolean", default = false, required = true }, },
           { provision_key = { type = "string", unique = true, auto = true, required = true }, },

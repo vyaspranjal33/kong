@@ -326,4 +326,16 @@ function Plugins:select_by_cache_key(key)
 end
 
 
+function Plugins:row_to_entity(row, options)
+  local entity = self.super.row_to_entity(self, row, options)
+  local subschema = self.schema.subschemas[row.name]
+  if not subschema then
+    return entity
+  end
+
+  entity.mesh = subschema.mesh
+  return entity
+end
+
+
 return Plugins

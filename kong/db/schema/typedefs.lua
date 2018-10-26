@@ -252,4 +252,31 @@ typedefs.key = Schema.define {
 }
 
 
+typedefs.mesh_inbound = Schema.define {
+  type = "string",
+  default = "inbound",
+  eq = "inbound",
+  nullable = false,
+}
+
+
+typedefs.mesh_outbound = Schema.define {
+  type = "string",
+  default = "outbound",
+  eq = "outbound",
+  nullable = false,
+}
+
+
+typedefs.mesh_two_way = Schema.define {
+  type = "string",
+  default = "two-way",
+  one_of = { "inbound", "outbound", "two-way" },
+  nullable = false,
+}
+
+
+
+
+
 return typedefs

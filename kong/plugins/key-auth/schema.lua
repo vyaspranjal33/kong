@@ -8,6 +8,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_outbound },
           { key_names = {
               type = "array",
               required = true,

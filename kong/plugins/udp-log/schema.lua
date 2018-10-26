@@ -6,6 +6,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_two_way },
           { host = typedefs.host({ required = true }) },
           { port = typedefs.port({ required = true }) },
           { timeout = { type = "number", default = 10000 }, },

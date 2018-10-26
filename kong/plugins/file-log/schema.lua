@@ -1,3 +1,5 @@
+local typedefs = require "kong.db.schema.typedefs"
+
 local pl_file = require "pl.file"
 local pl_path = require "pl.path"
 
@@ -19,6 +21,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_two_way },
           { path = { type = "string",
                      required = true,
                      custom_validator = validate_file,

@@ -10,6 +10,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_outbound },
           { ldap_host = typedefs.host({ required = true }), },
           { ldap_port = typedefs.port({ required = true }), },
           { start_tls = { type = "boolean", required = true, default = false }, },

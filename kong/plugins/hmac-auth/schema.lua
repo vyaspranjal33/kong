@@ -16,6 +16,7 @@ return {
     { config = {
         type = "record",
         fields = {
+          { mesh_mode = typedefs.mesh_mode_outbound },
           { hide_credentials = { type = "boolean", default = false }, },
           { clock_skew = { type = "number", default = 300, gt = 0 }, },
           { anonymous = { type = "string", uuid = true, legacy = true }, },
